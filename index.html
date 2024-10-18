@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="heading" onclick="abc()">Wecome to DOM</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptates dolor ullam, 
+        obcaecati beatae repudiandae ducimus aliquid excepturi quisquam consectetur impedi
+         et est repellendus vero amet minus consequatur. Temporibus, veritatis.</p>
+
+         <input type="text" id="inputField">
+         <button id="bgblue">BG Blue</button>
+         <button id="bggreen">BG Green</button>
+         <button id="bgbrown">BG Brown</button>
+         <button id="newText">New Text</button>
+         <button id="bgPrev">Previous BG</button>
+
+
+    <script>
+        let heading = document.getElementById('heading')
+        heading.addEventListener('click', function(){
+            heading.style.backgroundColor = "red"
+        })
+
+        function abc(){
+            heading.style.bacgroungColor = 'red'
+        }
+
+        let bgblue = document.getElementById("bgblue")
+        let body = document.getElementById("body")
+        bgblue.addEventListener('click',function(){
+            body.style.backgroundColor = "blue"
+            
+        })
+
+
+        document.getElementById("bggreen").addEventListener
+        ('click',function(){
+            body.style.backgroundColor = "green"
+
+        })
+
+
+
+        document.getElementById("bgbrown").addEventListener
+        ('click',function(){
+            body.style.backgroundColor = "brown"
+        })
+
+
+
+        document.getElementById('bgPrev').addEventListener
+        ('click',function(){
+            location.reload()
+        })
+
+
+        document.getElementById("newText").addEventListener
+        ('click',function(){
+            heading.innerText = "This is the new"
+        })
+
+
+
+
+        document.getElementById('newText').addEventListener
+        ('click',function(){
+           let inputField = document.getElementById('inputField')
+           let inputValue = inputField.value
+           heading.innerText = inputValue
+        })
+
+
+
+
+        
+
+
+
+
+
+       
+    </script>
+</body>
+</html>
