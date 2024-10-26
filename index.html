@@ -6,12 +6,21 @@
     <title>Document</title>
 </head>
 <body id="body">
-    <h1 id="heading" onclick="abc()">Wecome to DOM</h1>
+
+    <div id="comment-place">
+
+    </div>
+
+        <h1 id="heading" onclick="abc()">Wecome to DOM</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptates dolor ullam, 
         obcaecati beatae repudiandae ducimus aliquid excepturi quisquam consectetur impedi
          et est repellendus vero amet minus consequatur. Temporibus, veritatis.</p>
 
+    
+    
+
          <input type="text" id="inputField">
+         <button id="comment-btn">Comment Now</button>
          <button id="bgblue">BG Blue</button>
          <button id="bggreen">BG Green</button>
          <button id="bgbrown">BG Brown</button>
@@ -70,12 +79,37 @@
         ('click',function(){
            let inputField = document.getElementById('inputField')
            let inputValue = inputField.value
-           heading.innerText = inputValue
+           heading.innerText = inputValue;
+           inputField.value = '';
         })
 
 
 
 
+
+        document.getElementById('comment-btn').addEventListener
+        ('click',function(){
+
+             const inputField = document.getElementById('inputField');
+             const inputFieldValue = inputField.value;
+
+
+             const commentplace = document.getElementById('comment-place');
+             
+
+
+             const makePTag = document.createElement('p');
+             makeptag.innerText = inputFieldValue;
+             commentplace.appendChild(makePTag); 
+
+        })
+
+
+
+
+
+
+         
         
 
 
